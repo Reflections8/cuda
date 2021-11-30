@@ -1,0 +1,888 @@
+/*GLOBAL STYLES*/
+*, *:before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+    h1 {
+        font-size: 42px;
+        font-weight: 700;
+        color: #fff;
+    }
+    h2 {
+        font-size: 40px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin: 0 auto;
+        padding-top: 110px;
+        text-align: center;
+        color: #3c4761;
+    }
+        h2 + p {
+            width: 100%;
+            margin: 0 auto;
+            padding-bottom: 60px;
+            text-align: center;
+            font-size: 18px;
+        }
+        h2:after {
+            content: "";
+            display: block;
+            margin: 20px auto;
+            width: 18%;
+            max-width: 87px;
+            border: 3px #14A58C solid;
+        }
+
+ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.section {
+    padding-bottom: 110px;;
+}
+   
+
+/*HEADER*/
+header {
+    background-color: #87509C;
+    height: 100px;
+}
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.header_nav {
+    width: 43%;
+}
+    .header_nav ul{
+        display: flex;
+        list-style-type: none;
+        width: 100%;
+        justify-content: space-between;
+    }
+        .header_nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 8px 17px;
+            border-radius: 5px;
+            transition: background-color .1s ease-in;
+        }
+            .header_nav ul li a:hover {
+                background-color: #643A79;
+            }
+
+/*INTRO*/
+.intro {
+    background-color: #87509C;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro_title {
+    margin-top: -10%;
+}
+    .intro h1 {
+        text-align: center;
+        width: 83%;
+        max-width: 920px;
+        line-height: 48px;
+        margin: 0 auto;
+    }
+
+.button_wrap {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    margin: 60px auto 0 auto;
+    height: 68px;
+    max-width: 293px;
+    background-color: #EB7D4B;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    font-family: 'Titillium Web', sans-serif;
+    box-shadow: 0 4px 0 #C86A40;
+    transition: all .1s;
+}
+    .button_wrap:hover {
+        background-color: #e27847;
+    }
+
+/*SERVICES*/
+.section.services {
+    background-color: #17C2A4;
+    color: #fff;
+}
+    .services .section_header h2 {
+        color: #fff;
+    }
+.services {
+    display: flex;
+    justify-content: space-between;
+}
+    .services_item {
+        width: 25%;
+        padding: 0 10px;
+    }
+        .service_img {  
+            display: block;
+            margin: 0 auto 50px auto;
+            object-fit: contain;
+            transition: transform .2s linear;
+        }
+            .service_img:hover {
+                transform: rotate(0.04turn);
+            }
+        .service_title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .service_text {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+        }
+
+/*TEAM*/
+.section.team {
+    background-color: #E7F1F8;
+}
+    .team .section_header p {
+        color: #3c4761;
+    }
+.team {
+    display: flex;
+    justify-content: space-between;
+}
+    .team_item {
+        width: 25%;
+        padding: 0 25px;
+        text-align: center;
+    }
+        .team_img {
+            display: block;
+            border-radius: 50%;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        .team_name {
+            color: #27283D;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .team_position {
+            color: #30BAE7;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        .team_text {
+            color: #3C4761;
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+.team_icons {
+    display: flex;
+    justify-content: center;
+}
+    .team_icons a {
+        background-color: #BDD1DF;
+        color: #fff;
+        width: 36px;
+        height: 36px;
+        padding: 10px;
+        padding-top: 6px;
+        margin: 0 5px;
+        border-radius: 50%;
+        transition: all .1s linear;
+    }
+        .team_icons a:hover {
+            color: #BDD1DF;
+            background-color: #fff;
+            transform: scale(1.2);
+        }
+
+/*SKILLS*/
+.our_skills h2:after {
+    border-color: #DFE8ED;
+}
+    .our_skills .section_header p {
+        max-width: 580px;
+    }
+
+.skills {
+    display: flex;
+    justify-content: space-between;
+}
+    .skill_item {
+        width: 25%;
+        padding: 0 30px;
+        position: relative;
+    }
+
+        .skill_img {
+            display: block;
+            margin: 0 auto 30px auto;
+            width: 100%;
+        }
+    .skill_img:after {
+        display: block;
+        content: "95%";
+        color: #000;
+    }
+
+.skill_percent {
+    position: absolute;
+    top: 18%;
+    left: 36%;
+    font-size: 50px;
+    font-weight: 300;
+    color: #3c4761;
+}
+
+.skill_name {
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #3c4761;
+}
+
+/*PORTFOLIO*/
+.our_portfolio {
+    background-color: #FFDD99;
+}
+    .our_portfolio .section_header h2 {
+        color: #393939;
+    }
+    .our_portfolio .section_header h2::after {
+        border-color: #E5C37F;
+    }
+    .our_portfolio .section_header p {
+        max-width: 560px;
+    }
+
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 60px auto;
+    width: 100%;
+    text-transform: uppercase;
+}
+    .filter {
+        display: block;
+        width: 84px;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        background-color: #EBC985;
+        margin: 0 10px;
+        text-transform: uppercase;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: #393939;
+        transition: background-color .1s linear;
+        cursor: pointer;
+    }
+        .filter:hover {
+            background-color: #fff;
+        }
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+    .portfolio_row {
+        display: flex;
+        margin-bottom: 60px;
+    }
+        .portfolio_title {
+            text-align: center;
+            text-transform: uppercase;
+            color: #393939;
+            font-size: 18px;
+            font-weight: 400;
+
+        }
+
+.portfolio_button {
+    display: block;
+    text-align: center;
+    padding: 1em 2em;
+    margin: 0 auto;
+    height: 68px;
+    max-width: 293px;
+    background-color: #17C2A4;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    font-family: 'Titillium Web', sans-serif;
+    box-shadow: 0 4px 0 #14A58C;
+    transition: all .1s linear;
+}
+    .portfolio_button:hover {
+        background-color: #17bd9e;
+    }
+.portfolio_img {
+    margin: 10px;
+    width: 95%;
+}
+
+/*REVIEWS*/
+.our_reviews {
+    background-color: #D74680;
+    color: #fff;
+}
+
+.our_reviews .section_header {
+    color: #fff;
+}
+
+.our_reviews .section_header h2 {
+    color: #fff;
+}
+    .our_reviews .section_header h2:after {
+        border-color: #B73C6D;
+    }
+
+.reviews_row {
+    display: flex;
+    justify-content: space-between;
+}
+.review_item {
+    width: 46%;
+    display: flex;
+}
+    .review_img {
+        border-radius: 50%;
+        margin-right: 40px;
+        max-width: 96px;
+        max-height: 96px;
+    }
+
+    .review_text {
+        margin-bottom: 20px;
+        font-style: italic;
+        font-size: 21px;
+    }
+    .review_author {
+        font-weight: 700;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+    .review_author_position {
+        color: #ffdd99;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+.reviews_row--first {
+    margin-bottom: 140px;
+}
+
+/*FORM*/
+.section--form {
+    background-color: #3C5499;
+    color: #fff;
+}
+
+.section--form .section_header h2 {
+    color: #fff;
+}
+    .section--form .section_header h2:after {
+        border-color: #273A71;
+    }
+
+.form {
+    max-width: 860px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.form_row {
+    display: flex;
+    justify-content: space-between;
+}
+    .username, .usermail {
+        width: 48%;
+        height: 56px;
+        padding-left: 24px;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 18px;
+        background-color: #273A71;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        outline: none;
+    }
+        input:focus::placeholder {
+            color: transparent;
+        }
+        textarea:focus::placeholder {
+            color: transparent;
+        }
+
+.usertext {
+    display: block;
+    margin: 27px auto 60px auto;
+    width: 100%;
+    height: 200px;
+    padding-left: 24px;
+    padding-top: 20px;
+    background-color: #273A71;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    resize: none;
+    outline: none;
+}
+    .username::-moz-placeholder, .usermail::-moz-placeholder, .usertext::-moz-placeholder{
+        color: #fff;
+    }
+    .username::-webkit-input-placeholder, .usermail::-webkit-input-placeholder, .usertext::-webkit-input-placeholder { color: #fff; }
+
+    .form input:valid, .form textarea:valid {
+        outline: 1px solid #fff;
+    }
+    
+
+    .form button {
+        display: block;
+        margin: 0 auto;
+        width: 294px;
+        height: 70px;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #fff;
+        font-family: 'Titillium Web', sans-serif;
+        background-color: #30BAE7;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 4px 0 #299EC5;
+        transition: all .1s linear;
+    }
+        .form button:hover {
+            background-color: #2db0db;
+        }
+
+footer {
+    height: 100px;
+    background-color: #344B8E;
+}
+
+.footer_inner ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: space-between;
+    margin: 0 70px;
+    padding-top: 40px;
+}
+        .footer_inner ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            font-size: 24px;
+            transition: all .1s;
+        }
+            .footer_inner ul li a:hover {
+                color: #30B4E2;
+            }
+
+/*ALL MEDIA --- ALL MEDIA --- ALL MEDIA*/
+
+@media (max-width: 1100px) {
+
+    /*TEAM*/
+    .team_name {
+        font-size: 22px;
+    }
+    
+} /*End of 1100px*/
+
+@media (max-width: 1050px) {
+
+    /*GLOBAL*/
+    h2 {
+        padding-top: 80px;
+    }
+
+    /*TEAM*/
+    .team {
+        flex-wrap: wrap;
+        padding-bottom: 30px;
+    }
+        .team_item {
+            width: 50%;
+            margin-bottom: 40px;
+        }
+            .team_img {
+                width: 80%;
+                margin: 0 auto 20px auto;
+            }
+    
+    /*SKILLS*/
+    .our_skills {
+        padding-bottom: 0;
+    }
+    .skills {
+        flex-wrap: wrap;
+    }
+        .skill_item {
+            width: 50%;
+            margin-bottom: 50px;
+        }
+            .skill_img {
+                width: 50%;
+                margin-bottom: 20px;
+            }
+     /*SERVICES*/
+    .section.services {
+        padding-bottom: 80px;
+    }
+    
+    
+} /*End of 1050px*/
+
+@media (max-width: 950px) {
+    .container {
+        padding: 0 25px;
+    }
+    /*HEADER*/
+    .header_nav {
+        display: none;
+    }
+
+    /*FOOTER*/
+    .footer_inner ul li a {
+        font-size: 18px;
+        margin: 10px;
+    }
+
+
+} /*End of 950px*/
+
+@media (max-width: 900px) {
+    /*SERVICES*/
+    .section.services {
+        padding-bottom: 10px;
+    }
+    .services {
+        flex-wrap: wrap;
+    }
+        .services_item {
+            width: 50%;
+            margin-bottom: 50px;
+        }
+            .service_img {
+                margin-bottom: 10px;
+            }
+            .service_title {
+                margin: 0;
+            }
+            .service_text {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+} /*End of 900px*/
+
+@media (max-width: 850px) {
+    
+    /*GLOBAL*/
+    h1 {
+        font-size: 38px;
+    }
+    h2 {
+        font-size: 35px;
+        letter-spacing: 2.5px;
+        padding-top: 50px;
+    }
+
+    /*REVIEWS*/
+    .review_item {
+        width: 50%;
+    }
+        .review_info {
+            margin-right: 20px;
+        }
+        .review_img {
+            margin-right: 20px;
+        }
+        .review_text {
+            font-size: 18px;
+        }
+        .review_author {
+            font-size: 20px;
+        }
+        .review_author_position {
+            font-size: 16px;
+        }
+        
+        /*FOOTER*/
+        footer {
+            height: auto;
+            padding-bottom: 20px;
+        }
+        .footer_inner ul {
+            flex-wrap: wrap;
+            padding-top: 20px;
+            margin: 0 auto;
+        }
+            .footer_inner ul li {
+                width: 33.333%;
+                text-align: center;
+            }
+                .footer_inner ul li:last-child {
+                    width: 100%;
+                }
+
+    /*FORM*/
+    .section--form {
+        padding-bottom: 80px;
+    }
+
+} /*End of 850px*/
+
+@media (max-width: 700px) {
+    
+    /*PORTFOLIO*/
+    .our_portfolio {
+        padding-bottom: 50px;
+    }
+
+    .filters {
+        margin-bottom: 30px;
+    }
+    .portfolio_row {
+        flex-wrap: wrap;
+        margin: 0;
+    }
+        .portfolio_item {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+            .portfolio_img {
+                display: block;
+                width: 80%;
+                margin: 10px auto;
+            }
+
+} /*End of 700px*/
+
+@media (max-width: 650px) {
+
+    /*REVIEWS*/
+    .our_reviews {
+        padding-bottom: 30px;
+    }
+    .reviews_row {
+        flex-wrap: wrap;
+    }
+    .reviews_row--first {
+        margin-bottom: 0;
+    }
+        .review_item {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+    /*FORM*/
+    .form input, .form textarea {
+        font-size: 16px;
+    }
+
+} /*End of 600px*/
+
+@media (max-width: 600px) {
+
+    /*GLOBAL*/
+    .intro h1 {
+        font-size: 34px;
+        line-height: 44px;
+    }
+    h2 {
+        font-size: 30px;
+        padding-top: 50px;
+    }
+
+    h2 + p {
+        font-size: 17px;
+    }
+
+    /*TEAM*/
+    .team_item {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+        .team_img {
+            width: 80%;
+            margin: 0 auto 20px auto;
+        }
+
+    /*SKILLS*/
+    .skill_item {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+        .skill_item:last-child {
+            margin-bottom: 40px;
+        }
+        .skill_img {
+            width: 30%;
+        }
+
+    /*BUTTONS*/
+    .button_wrap, .portfolio_button{
+        font-size: 17px;
+        height: 60px;
+    }
+
+    .filter {
+        font-size: 17px;
+    }
+
+
+} /*End of 600px*/
+
+@media (max-width: 550px) {
+    .container {
+        padding: 0 15px;
+    }
+    /*SERVICES*/
+    .services_item {
+        width: 100%;
+    }
+        .service_img {
+            width: 90px;
+            height: 90px;
+        }
+        .service_text {
+            width: 85%;
+        }
+
+} /*End of 550px*/
+
+@media (max-width: 500px) {
+    
+    /*FORM*/
+    .section--form {
+        padding-bottom: 50px;
+    }
+    .form_row {
+        display: block;
+    }
+    
+    .form input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .form textarea {
+        margin: 0 auto 25px auto;
+    }
+
+    /*TEAM*/
+    .team_name {
+        font-size: 20px;
+    }
+
+    /*SKILLS*/
+    .skill_name {
+        font-size: 20px;
+    }
+
+    /*PORTFOLIO*/
+    .portfolio_title {
+        font-size: 16px;
+    }
+
+    /*BUTTONS*/
+    .form button {
+        font-size: 17px;
+        height: 60px;
+        width: 100%;
+    }
+} /*End of 500px*/
+
+@media (max-width: 450px) {
+
+    /*GLOBAL*/
+    .our_portfolio .section_header p {
+        padding-bottom: 30px;
+    }
+
+    /*FILTERS*/
+    .filters {
+        flex-wrap: wrap;
+    }
+        .filter {
+            width: 95%;
+            margin: 10px;
+            font-size: 17px;
+        }
+} /*End of 450px*/
+
+@media (max-width: 400px) {
+
+        /*GLOBAL*/
+        .intro h1 {
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        h2 {
+            font-size: 28px;
+            line-height: 35px;
+        }
+} /*End of 400px*/
