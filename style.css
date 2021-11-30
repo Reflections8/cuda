@@ -261,7 +261,6 @@ header {
         .skill_img {
             display: block;
             margin: 0 auto 30px auto;
-            width: 100%;
         }
     .skill_img:after {
         display: block;
